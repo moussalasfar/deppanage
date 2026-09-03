@@ -5,3 +5,6 @@ playwright-report
 test-results
 package-lock.json
 supabase/.temp
+docs
+plan-produit-v2.md
+roadmap-depanvite.md

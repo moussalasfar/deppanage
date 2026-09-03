@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Alexandria, IBM_Plex_Sans } from "next/font/google";
+import type { ReactNode } from "react";
 import "./globals.css";
 
 const alexandria = Alexandria({
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     "Demandez une assistance routiere a un professionnel verifie a Casablanca ou Rabat.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="fr" data-scroll-behavior="smooth">
       <body className={`${alexandria.variable} ${ibmPlexSans.variable}`}>
