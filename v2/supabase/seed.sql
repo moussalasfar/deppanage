@@ -1,0 +1,1 @@
+-- Intentionally empty. Test identities are created inside isolated database tests.

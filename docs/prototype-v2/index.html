@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7f3">
+    <title>DepanUp - Prototype client V2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@600;700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#home" data-screen-link="home" aria-label="DepanUp, accueil">
+        <img src="../brand/logo-mark.svg" alt="" width="42" height="42">
+        <span>DepanUp</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Navigation principale">
+        <button class="nav-item active" type="button" data-screen-link="home">Demander</button>
+        <button class="nav-item" type="button" data-screen-link="offers">Interventions</button>
+        <button class="nav-item" type="button">Compte</button>
+      </nav>
+      <button class="account-button" type="button" aria-label="Ouvrir le compte" title="Compte">
+        <i data-lucide="user-round" aria-hidden="true"></i>
+      </button>
+    </header>
+
+    <main>
+      <section class="screen active" id="home" aria-labelledby="home-title">
+        <div class="home-layout">
+          <div class="request-panel">
+            <p class="eyebrow">Assistance routiere a Casablanca et Rabat</p>
+            <h1 id="home-title">De quel depannage avez-vous besoin&nbsp;?</h1>
+            <p class="lead">Indiquez le probleme. Des professionnels verifies vous proposent leur prix et leur delai.</p>
+
+            <fieldset class="service-fieldset">
+              <legend>Type de probleme</legend>
+              <div class="service-grid">
+                <button class="service selected" type="button" aria-pressed="true">
+                  <i data-lucide="battery-charging" aria-hidden="true"></i>
+                  <span>Batterie</span>
+                </button>
+                <button class="service" type="button" aria-pressed="false">
+                  <i data-lucide="circle-dot" aria-hidden="true"></i>
+                  <span>Pneu</span>
+                </button>
+                <button class="service" type="button" aria-pressed="false">
+                  <i data-lucide="truck" aria-hidden="true"></i>
+                  <span>Remorquage</span>
+                </button>
+                <button class="service" type="button" aria-pressed="false">
+                  <i data-lucide="wrench" aria-hidden="true"></i>
+                  <span>Autre panne</span>
+                </button>
+              </div>
+            </fieldset>
+
+            <button class="location-button" type="button">
+              <span class="location-icon"><i data-lucide="locate-fixed" aria-hidden="true"></i></span>
+              <span><strong>Utiliser ma position</strong><small>Pour trouver les depanneurs les plus proches</small></span>
+              <i data-lucide="chevron-right" aria-hidden="true"></i>
+            </button>
+
+            <button class="primary-action" type="button" data-screen-link="request">
+              Demander un depanneur
+              <i data-lucide="arrow-right" aria-hidden="true"></i>
+            </button>
+            <button class="provider-link" type="button">Vous etes depanneur&nbsp;? <span>Rejoindre le reseau</span></button>
+          </div>
+
+          <div class="photo-panel" aria-label="Intervention de depannage automobile">
+            <img src="https://images.pexels.com/photos/3806249/pexels-photo-3806249.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="Mecanicien reparant la roue d'une voiture">
+            <div class="coverage-note">
+              <i data-lucide="shield-check" aria-hidden="true"></i>
+              <span><strong>Professionnels verifies</strong><small>Identite, permis, vehicule et assurance controles</small></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="trust-strip" aria-label="Principaux engagements">
+          <div><i data-lucide="badge-check" aria-hidden="true"></i><span><strong>Identite controlee</strong><small>Documents verifies manuellement</small></span></div>
+          <div><i data-lucide="receipt-text" aria-hidden="true"></i><span><strong>Prix connu avant depart</strong><small>Vous choisissez l'offre</small></span></div>
+          <div><i data-lucide="map-pinned" aria-hidden="true"></i><span><strong>Suivi de l'arrivee</strong><small>Position partagee apres acceptation</small></span></div>
+        </div>
+      </section>
+
+      <section class="screen flow-screen" id="request" aria-labelledby="request-title">
+        <div class="flow-header">
+          <button class="icon-button" type="button" data-screen-link="home" aria-label="Retour" title="Retour"><i data-lucide="arrow-left" aria-hidden="true"></i></button>
+          <div class="progress-copy"><span>Etape 2 sur 4</span><strong>Votre vehicule</strong></div>
+          <span class="saved-state"><i data-lucide="cloud" aria-hidden="true"></i> Enregistre</span>
+        </div>
+        <div class="progress-track" aria-hidden="true"><span style="width: 50%"></span></div>
+
+        <form class="flow-content" data-next="offers">
+          <div class="flow-main">
+            <p class="eyebrow">Demande de depannage</p>
+            <h1 id="request-title">Quel vehicule est en panne&nbsp;?</h1>
+            <p class="lead compact">Ces informations aident le professionnel a venir avec le bon equipement.</p>
+
+            <div class="form-grid">
+              <label>Type de vehicule
+                <select required>
+                  <option>Voiture</option>
+                  <option>Moto</option>
+                  <option>Utilitaire</option>
+                  <option>Poids lourd</option>
+                </select>
+              </label>
+              <label>Marque
+                <input type="text" value="Dacia" required>
+              </label>
+              <label>Modele
+                <input type="text" value="Logan" required>
+              </label>
+              <label>Immatriculation <span class="optional">Facultatif</span>
+                <input type="text" placeholder="12345-A-6">
+              </label>
+            </div>
+
+            <fieldset class="photo-upload">
+              <legend>Photos du probleme <span class="optional">Facultatif</span></legend>
+              <button type="button"><i data-lucide="camera" aria-hidden="true"></i><strong>Ajouter des photos</strong><small>JPG ou PNG, 10 Mo maximum</small></button>
+            </fieldset>
+          </div>
+
+          <aside class="request-summary">
+            <h2>Votre demande</h2>
+            <dl>
+              <div><dt>Probleme</dt><dd>Batterie</dd></div>
+              <div><dt>Position</dt><dd>Boulevard Zerktouni, Casablanca</dd></div>
+              <div><dt>Partage GPS</dt><dd><i data-lucide="lock-keyhole" aria-hidden="true"></i> Position protegee</dd></div>
+            </dl>
+            <p><i data-lucide="info" aria-hidden="true"></i> Votre position exacte sera partagee uniquement avec le depanneur choisi.</p>
+          </aside>
+
+          <div class="flow-actions">
+            <button class="secondary-action" type="button" data-screen-link="home">Retour</button>
+            <button class="primary-action" type="submit">Continuer <i data-lucide="arrow-right" aria-hidden="true"></i></button>
+          </div>
+        </form>
+      </section>
+
+      <section class="screen flow-screen" id="offers" aria-labelledby="offers-title">
+        <div class="offers-heading">
+          <div>
+            <p class="eyebrow">Dacia Logan - Batterie</p>
+            <h1 id="offers-title">3 offres recues</h1>
+            <p class="lead compact">Comparez le prix, l'arrivee et l'experience. Vous restez libre de choisir.</p>
+          </div>
+          <div class="live-status"><span></span> Recherche active</div>
+        </div>
+
+        <div class="offers-layout">
+          <div class="offer-list">
+            <article class="offer recommended">
+              <div class="offer-tag">Recommande</div>
+              <div class="provider-avatar">MR</div>
+              <div class="provider-summary">
+                <h2>Maroc Remorquage</h2>
+                <p><i data-lucide="badge-check" aria-hidden="true"></i> Identite verifiee <span>4,9 (126 avis)</span></p>
+              </div>
+              <div class="offer-price"><strong>220 DH</strong><span>Prix total propose</span></div>
+              <div class="offer-meta">
+                <span><i data-lucide="clock-3" aria-hidden="true"></i><strong>12 min</strong> avant arrivee</span>
+                <span><i data-lucide="map-pin" aria-hidden="true"></i><strong>3,2 km</strong> de votre position</span>
+                <span><i data-lucide="briefcase-business" aria-hidden="true"></i><strong>8 ans</strong> d'experience</span>
+              </div>
+              <p class="offer-message">Disponible maintenant avec booster et batterie de remplacement compatible.</p>
+              <button class="primary-action" type="button" data-screen-link="tracking">Choisir cette offre <i data-lucide="arrow-right" aria-hidden="true"></i></button>
+            </article>
+
+            <article class="offer">
+              <div class="provider-avatar blue">AS</div>
+              <div class="provider-summary">
+                <h2>Auto Secours Casa</h2>
+                <p><i data-lucide="badge-check" aria-hidden="true"></i> Identite verifiee <span>4,7 (84 avis)</span></p>
+              </div>
+              <div class="offer-price"><strong>190 DH</strong><span>Prix total propose</span></div>
+              <div class="offer-meta compact-meta">
+                <span><i data-lucide="clock-3" aria-hidden="true"></i><strong>22 min</strong></span>
+                <span><i data-lucide="map-pin" aria-hidden="true"></i><strong>6,8 km</strong></span>
+              </div>
+              <button class="outline-action" type="button" data-screen-link="tracking">Voir l'offre</button>
+            </article>
+
+            <article class="offer">
+              <div class="provider-avatar green">DA</div>
+              <div class="provider-summary">
+                <h2>Depannage Al Amal</h2>
+                <p><i data-lucide="badge-check" aria-hidden="true"></i> Identite verifiee <span>4,8 (57 avis)</span></p>
+              </div>
+              <div class="offer-price"><strong>250 DH</strong><span>Prix total propose</span></div>
+              <div class="offer-meta compact-meta">
+                <span><i data-lucide="clock-3" aria-hidden="true"></i><strong>9 min</strong></span>
+                <span><i data-lucide="map-pin" aria-hidden="true"></i><strong>2,1 km</strong></span>
+              </div>
+              <button class="outline-action" type="button" data-screen-link="tracking">Voir l'offre</button>
+            </article>
+          </div>
+
+          <aside class="safety-aside">
+            <i data-lucide="shield-check" aria-hidden="true"></i>
+            <h2>Votre securite d'abord</h2>
+            <p>Ne payez rien avant l'arrivee. Le prix choisi reste visible pendant toute l'intervention.</p>
+            <button type="button">Conseils de securite</button>
+          </aside>
+        </div>
+      </section>
+
+      <section class="screen tracking-screen" id="tracking" aria-labelledby="tracking-title">
+        <div class="map-canvas" aria-label="Carte de suivi simulee">
+          <div class="map-road road-one"></div>
+          <div class="map-road road-two"></div>
+          <div class="map-road road-three"></div>
+          <div class="route-line"></div>
+          <div class="map-label label-one">Bd. Zerktouni</div>
+          <div class="map-label label-two">Maarif</div>
+          <div class="client-pin"><i data-lucide="map-pin" aria-hidden="true"></i></div>
+          <div class="provider-pin"><i data-lucide="truck" aria-hidden="true"></i></div>
+          <button class="map-control" type="button" aria-label="Recentrer la carte" title="Recentrer"><i data-lucide="locate-fixed" aria-hidden="true"></i></button>
+        </div>
+
+        <aside class="tracking-sheet">
+          <div class="sheet-handle" aria-hidden="true"></div>
+          <div class="arrival-row">
+            <div><p class="eyebrow">En route vers vous</p><h1 id="tracking-title">Arrivee dans 12 min</h1></div>
+            <div class="eta-ring">12<span>min</span></div>
+          </div>
+          <div class="provider-row">
+            <div class="provider-avatar">MR</div>
+            <div><strong>Maroc Remorquage</strong><span><i data-lucide="star" aria-hidden="true"></i> 4,9 - Vehicule 24-A-4587</span></div>
+            <button class="icon-button" type="button" aria-label="Appeler le depanneur" title="Appeler"><i data-lucide="phone" aria-hidden="true"></i></button>
+            <button class="icon-button" type="button" aria-label="Ecrire au depanneur" title="Message"><i data-lucide="message-circle" aria-hidden="true"></i></button>
+          </div>
+          <ol class="status-timeline">
+            <li class="done"><span><i data-lucide="check" aria-hidden="true"></i></span><div><strong>Offre acceptee</strong><small>14:32</small></div></li>
+            <li class="current"><span><i data-lucide="truck" aria-hidden="true"></i></span><div><strong>Le depanneur est en route</strong><small>Position actualisee maintenant</small></div></li>
+            <li><span></span><div><strong>Arrivee sur place</strong></div></li>
+          </ol>
+          <div class="price-confirmation"><span>Prix convenu</span><strong>220 DH</strong></div>
+          <div class="tracking-actions">
+            <button class="outline-action" type="button"><i data-lucide="share-2" aria-hidden="true"></i> Partager le suivi</button>
+            <button class="text-danger" type="button">Signaler un probleme</button>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <nav class="mobile-nav" aria-label="Navigation mobile">
+      <button class="active" type="button" data-screen-link="home"><i data-lucide="plus-circle" aria-hidden="true"></i><span>Demander</span></button>
+      <button type="button" data-screen-link="offers"><i data-lucide="route" aria-hidden="true"></i><span>Interventions</span></button>
+      <button type="button"><i data-lucide="user-round" aria-hidden="true"></i><span>Compte</span></button>
+    </nav>
+
+    <div class="prototype-switcher" aria-label="Changer d'ecran">
+      <span>Apercu</span>
+      <button class="active" type="button" data-screen-link="home">Accueil</button>
+      <button type="button" data-screen-link="request">Demande</button>
+      <button type="button" data-screen-link="offers">Offres</button>
+      <button type="button" data-screen-link="tracking">Suivi</button>
+    </div>
+
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script>
+      lucide.createIcons();
+
+      const screens = [...document.querySelectorAll('.screen')];
+      const screenButtons = [...document.querySelectorAll('[data-screen-link]')];
+
+      function showScreen(id) {
+        screens.forEach((screen) => screen.classList.toggle('active', screen.id === id));
+        document.querySelectorAll('.prototype-switcher button').forEach((button) => {
+          button.classList.toggle('active', button.dataset.screenLink === id);
+        });
+        const interventionScreen = id === 'offers' || id === 'tracking';
+        document.querySelectorAll('.mobile-nav button').forEach((button) => {
+          button.classList.toggle('active', button.dataset.screenLink === (interventionScreen ? 'offers' : 'home'));
+        });
+        document.querySelectorAll('.desktop-nav .nav-item').forEach((button) => {
+          button.classList.toggle('active', button.dataset.screenLink === (interventionScreen ? 'offers' : 'home'));
+        });
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      }
+
+      screenButtons.forEach((button) => {
+        button.addEventListener('click', (event) => {
+          event.preventDefault();
+          showScreen(button.dataset.screenLink);
+        });
+      });
+
+      document.querySelectorAll('.service').forEach((button) => {
+        button.addEventListener('click', () => {
+          document.querySelectorAll('.service').forEach((service) => {
+            const selected = service === button;
+            service.classList.toggle('selected', selected);
+            service.setAttribute('aria-pressed', String(selected));
+          });
+        });
+      });
+
+      document.querySelector('.flow-content').addEventListener('submit', (event) => {
+        event.preventDefault();
+        showScreen(event.currentTarget.dataset.next);
+      });
+    </script>
+  </body>
+</html>

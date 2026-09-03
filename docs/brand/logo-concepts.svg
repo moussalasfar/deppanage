@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1024" viewBox="0 0 1440 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Concepts de logo DepanUp</title>
+  <desc id="desc">Comparaison de trois symboles fondes sur une lettre D, une route et un mouvement vers l'avant.</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="18" flood-color="#17201E" flood-opacity="0.08"/>
+    </filter>
+
+    <mask id="lane-cut" maskUnits="userSpaceOnUse" x="0" y="0" width="96" height="96">
+      <rect width="96" height="96" fill="#FFFFFF"/>
+      <rect x="53" y="46" width="11" height="4" rx="2" fill="#000000"/>
+    </mask>
+
+    <symbol id="concept-a" viewBox="0 0 96 96">
+      <g mask="url(#lane-cut)">
+        <path fill="currentColor" fill-rule="evenodd" d="M12 10h34c24 0 40 15.8 40 38S70 86 46 86H12V10Zm19 18v40h15c12.6 0 21-7.7 21-20s-8.4-20-21-20H31Z"/>
+        <path fill="currentColor" d="M43 41h22l11 7-11 7H43l8-7-8-7Z"/>
+      </g>
+    </symbol>
+
+    <symbol id="concept-b" viewBox="0 0 96 96">
+      <path d="M18 16h27c23 0 37 13 37 32S68 80 45 80H18V16Z" fill="none" stroke="currentColor" stroke-width="13" stroke-linejoin="round"/>
+      <path d="M28 48h39" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+      <path d="m60 37 14 11-14 11Z" fill="currentColor"/>
+      <path d="M35 48h14" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 5"/>
+    </symbol>
+
+    <symbol id="concept-c" viewBox="0 0 96 96">
+      <path fill="currentColor" d="M14 14h35c22 0 35 13.8 35 34S71 82 49 82H14V14Zm19 18v32h15c10.7 0 17-6.1 17-16s-6.3-16-17-16H33Z"/>
+      <path fill="currentColor" d="M31 38h20v-9l22 19-22 19v-9H31V38Z"/>
+      <path fill="#FFFFFF" d="M38 46h20v4H38z"/>
+    </symbol>
+
+    <style>
+      .kicker { font: 700 14px 'IBM Plex Sans', sans-serif; letter-spacing: 2px; fill: #D9382B; }
+      .title { font: 700 42px Alexandria, sans-serif; fill: #17201E; }
+      .body { font: 400 18px 'IBM Plex Sans', sans-serif; fill: #5D6965; }
+      .card-title { font: 700 22px Alexandria, sans-serif; fill: #17201E; }
+      .card-copy { font: 400 15px 'IBM Plex Sans', sans-serif; fill: #5D6965; }
+      .wordmark { font: 700 28px Alexandria, sans-serif; letter-spacing: 0; }
+      .label { font: 600 13px 'IBM Plex Sans', sans-serif; fill: #5D6965; }
+      .choice { font: 700 12px 'IBM Plex Sans', sans-serif; letter-spacing: 1px; fill: #FFFFFF; }
+    </style>
+  </defs>
+
+  <rect width="1440" height="1024" fill="#F6F7F3"/>
+  <text x="72" y="76" class="kicker">IDENTITE V2 / EXPLORATION 01</text>
+  <text x="72" y="130" class="title">Un D qui indique le chemin.</text>
+  <text x="72" y="168" class="body">Trois constructions testees comme symbole, mot-symbole et icone d'application.</text>
+
+  <g transform="translate(72 220)">
+    <rect width="408" height="410" rx="8" fill="#FFFFFF" filter="url(#shadow)"/>
+    <rect x="24" y="24" width="126" height="28" rx="14" fill="#D9382B"/>
+    <text x="87" y="43" text-anchor="middle" class="choice">RECOMMANDE</text>
+    <g transform="translate(44 82)" color="#D9382B">
+      <use href="#concept-a" width="112" height="112"/>
+    </g>
+    <text x="178" y="126" class="wordmark" fill="#17201E">DepanUp</text>
+    <text x="178" y="154" class="label">Un depanneur. Un prix. Maintenant.</text>
+    <line x1="24" y1="218" x2="384" y2="218" stroke="#D8DEDA"/>
+    <text x="24" y="258" class="card-title">A. Boucle routiere</text>
+    <text x="24" y="289" class="card-copy">La masse du D reste visible a petite taille.</text>
+    <text x="24" y="315" class="card-copy">La fleche est contenue et ne fragilise pas le contour.</text>
+    <g transform="translate(24 344)" color="#D9382B">
+      <use href="#concept-a" width="40" height="40"/>
+      <use href="#concept-a" x="60" y="-4" width="48" height="48"/>
+      <use href="#concept-a" x="132" y="-12" width="64" height="64"/>
+    </g>
+    <text x="245" y="371" class="label">24 / 48 / 64 px</text>
+  </g>
+
+  <g transform="translate(516 220)">
+    <rect width="408" height="410" rx="8" fill="#FFFFFF" filter="url(#shadow)"/>
+    <g transform="translate(44 82)" color="#D9382B">
+      <use href="#concept-b" width="112" height="112"/>
+    </g>
+    <text x="178" y="126" class="wordmark" fill="#17201E">DepanUp</text>
+    <text x="178" y="154" class="label">Un depanneur. Un prix. Maintenant.</text>
+    <line x1="24" y1="218" x2="384" y2="218" stroke="#D8DEDA"/>
+    <text x="24" y="258" class="card-title">B. Voie directionnelle</text>
+    <text x="24" y="289" class="card-copy">Le mouvement est plus expressif et plus sportif.</text>
+    <text x="24" y="315" class="card-copy">Les traits fins perdent cependant en force sous 32 px.</text>
+    <g transform="translate(24 344)" color="#D9382B">
+      <use href="#concept-b" width="40" height="40"/>
+      <use href="#concept-b" x="60" y="-4" width="48" height="48"/>
+      <use href="#concept-b" x="132" y="-12" width="64" height="64"/>
+    </g>
+    <text x="245" y="371" class="label">24 / 48 / 64 px</text>
+  </g>
+
+  <g transform="translate(960 220)">
+    <rect width="408" height="410" rx="8" fill="#FFFFFF" filter="url(#shadow)"/>
+    <g transform="translate(44 82)" color="#D9382B">
+      <use href="#concept-c" width="112" height="112"/>
+    </g>
+    <text x="178" y="126" class="wordmark" fill="#17201E">DepanUp</text>
+    <text x="178" y="154" class="label">Un depanneur. Un prix. Maintenant.</text>
+    <line x1="24" y1="218" x2="384" y2="218" stroke="#D8DEDA"/>
+    <text x="24" y="258" class="card-title">C. Monogramme compact</text>
+    <text x="24" y="289" class="card-copy">Le D et la fleche se lisent immediatement.</text>
+    <text x="24" y="315" class="card-copy">La forme est plus generique et moins routiere.</text>
+    <g transform="translate(24 344)" color="#D9382B">
+      <use href="#concept-c" width="40" height="40"/>
+      <use href="#concept-c" x="60" y="-4" width="48" height="48"/>
+      <use href="#concept-c" x="132" y="-12" width="64" height="64"/>
+    </g>
+    <text x="245" y="371" class="label">24 / 48 / 64 px</text>
+  </g>
+
+  <g transform="translate(72 674)">
+    <rect width="1296" height="278" rx="8" fill="#17201E"/>
+    <text x="32" y="46" class="kicker">TEST DE CONTRASTE ET MONOCHROME</text>
+    <g transform="translate(46 83)" color="#FFFFFF">
+      <use href="#concept-a" width="112" height="112"/>
+    </g>
+    <text x="178" y="129" class="wordmark" fill="#FFFFFF">DepanUp</text>
+    <text x="178" y="160" class="label" fill="#BFC8C4">Un depanneur. Un prix. Maintenant.</text>
+
+    <rect x="512" y="76" width="160" height="128" rx="8" fill="#D9382B"/>
+    <g transform="translate(544 84)" color="#FFFFFF">
+      <use href="#concept-a" width="96" height="96"/>
+    </g>
+
+    <rect x="704" y="76" width="160" height="128" rx="8" fill="#F6F7F3"/>
+    <g transform="translate(736 84)" color="#17201E">
+      <use href="#concept-a" width="96" height="96"/>
+    </g>
+
+    <rect x="896" y="76" width="336" height="128" rx="8" fill="#FFFFFF"/>
+    <g transform="translate(920 92)" color="#D9382B">
+      <use href="#concept-a" width="72" height="72"/>
+    </g>
+    <text x="1002" y="132" class="wordmark" fill="#17201E">DepanUp</text>
+    <text x="1003" y="157" class="label">Assistance routiere</text>
+  </g>
+</svg>
