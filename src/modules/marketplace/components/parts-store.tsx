@@ -1,14 +1,11 @@
 "use client";
 
 import { useDeferredValue, useState } from "react";
+import Image from "next/image";
 import {
-  BatteryCharging,
   CalendarClock,
   Check,
   CheckCircle2,
-  Droplets,
-  Filter,
-  Lightbulb,
   Minus,
   Plus,
   Search,
@@ -31,7 +28,7 @@ const products = [
     compatibility: ["Dacia Logan", "Renault Clio"],
     price: 890,
     stock: "En stock aujourd'hui",
-    icon: BatteryCharging,
+    image: "/products/battery-60ah.svg",
     tone: "signal",
   },
   {
@@ -43,7 +40,7 @@ const products = [
     compatibility: ["Dacia Logan"],
     price: 620,
     stock: "4 disponibles",
-    icon: Wrench,
+    image: "/products/tire-185.svg",
     tone: "carbon",
   },
   {
@@ -55,7 +52,7 @@ const products = [
     compatibility: ["Dacia Logan", "Renault Clio"],
     price: 145,
     stock: "En stock aujourd'hui",
-    icon: Droplets,
+    image: "/products/wipers-600.svg",
     tone: "route",
   },
   {
@@ -67,7 +64,7 @@ const products = [
     compatibility: ["Renault Clio"],
     price: 110,
     stock: "En stock aujourd'hui",
-    icon: Lightbulb,
+    image: "/products/bulbs-h7.svg",
     tone: "amber",
   },
   {
@@ -79,7 +76,7 @@ const products = [
     compatibility: ["Dacia Logan", "Renault Clio"],
     price: 390,
     stock: "Livraison demain",
-    icon: Droplets,
+    image: "/products/oil-5w40.svg",
     tone: "arrival",
   },
   {
@@ -91,7 +88,7 @@ const products = [
     compatibility: ["Dacia Logan"],
     price: 275,
     stock: "2 disponibles",
-    icon: Filter,
+    image: "/products/filter-kit.svg",
     tone: "concrete",
   },
 ] as const;
@@ -214,11 +211,15 @@ export function PartsStore() {
         {visibleProducts.length ? (
           <ul className="product-grid">
             {visibleProducts.map((product) => {
-              const ProductIcon = product.icon;
               return (
                 <li className="product-card" key={product.id}>
                   <div className={`product-visual ${product.tone}`}>
-                    <ProductIcon aria-hidden="true" />
+                    <Image
+                      alt={product.name}
+                      height={210}
+                      src={product.image}
+                      width={280}
+                    />
                     <span>{product.categoryLabel}</span>
                   </div>
                   <div className="product-copy">

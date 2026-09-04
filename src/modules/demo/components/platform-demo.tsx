@@ -116,21 +116,21 @@ const products = [
     name: "Batterie Start+ 60 Ah",
     price: 890,
     tag: "Pose possible",
-    icon: BatteryCharging,
+    image: "/products/battery-60ah.svg",
   },
   {
     id: "tire",
     name: "Pneu route 185/65 R15",
     price: 620,
     tag: "En stock",
-    icon: CircleDot,
+    image: "/products/tire-185.svg",
   },
   {
     id: "care",
     name: "Kit revision essentiel",
     price: 275,
     tag: "Compatible",
-    icon: Wrench,
+    image: "/products/filter-kit.svg",
   },
 ];
 
@@ -859,11 +859,15 @@ function MarketplaceView({
         </div>
         <ul>
           {visibleProducts.map((product) => {
-            const Icon = product.icon;
             return (
               <li key={product.id}>
                 <div className={`product-visual ${product.id}`}>
-                  <Icon aria-hidden="true" />
+                  <Image
+                    alt={product.name}
+                    height={240}
+                    src={product.image}
+                    width={320}
+                  />
                 </div>
                 <span>{product.tag}</span>
                 <h3>{product.name}</h3>

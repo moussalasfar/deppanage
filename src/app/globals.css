@@ -560,6 +560,13 @@ h1 {
   width: 54px;
 }
 
+.product-visual > img {
+  height: auto;
+  max-height: 138px;
+  object-fit: contain;
+  width: 100%;
+}
+
 .product-visual span {
   font-size: 0.72rem;
   font-weight: 700;
@@ -4127,6 +4134,12 @@ h1 {
   width: 54px;
 }
 
+.marketplace-products .product-visual > img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
 .marketplace-products li > span {
   color: #08745e;
   font-size: 0.64rem;
@@ -6340,6 +6353,10 @@ h1 {
   .product-visual svg {
     height: 44px;
     width: 44px;
+  }
+
+  .product-card .product-visual > img {
+    max-height: 104px;
   }
 
   .checkout-overlay {
