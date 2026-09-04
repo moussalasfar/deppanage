@@ -47,7 +47,6 @@ export function PhoneOtpForm({ returnTo }: { returnTo: string }) {
       setState({
         status: "error",
         message: "Le code ne peut pas etre envoye pour le moment.",
-        phone,
       });
     }
   }
