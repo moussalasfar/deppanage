@@ -1,30 +1,15 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import {
-  ArrowLeft,
-  Camera,
-  CheckCircle2,
-  Clock3,
-  MapPin,
-  ShieldAlert,
-} from "lucide-react";
+import { ArrowLeft, CheckCircle2, Clock3, ShieldAlert } from "lucide-react";
 import { isSupabaseAuthConfigured } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
 import { listEligibleRequests } from "@/modules/providers/application/list-eligible-requests";
+import { EligibleRequestBrowser } from "@/modules/providers/components/eligible-request-browser";
 import { supabaseEligibleRequestRepository } from "@/modules/providers/infrastructure/supabase-eligible-request-repository";
 import { supabaseProviderProfileRepository } from "@/modules/providers/infrastructure/supabase-provider-profile-repository";
-import { serviceCategories } from "@/modules/requests/domain/service-catalog";
 
 export const metadata = { title: "Demandes disponibles" };
 export const dynamic = "force-dynamic";
-
-function formatDate(value: string) {
-  return new Intl.DateTimeFormat("fr-MA", {
-    dateStyle: "medium",
-    timeStyle: "short",
-    timeZone: "Africa/Casablanca",
-  }).format(new Date(value));
-}
 
 export default async function ProviderRequestsPage() {
   if (!isSupabaseAuthConfigured()) {
@@ -102,44 +87,7 @@ export default async function ProviderRequestsPage() {
         </div>
 
         {requests.length ? (
-          <ul className="provider-request-list">
-            {requests.map((request) => {
-              const service = serviceCategories.find(
-                (item) => item.id === request.service,
-              );
-              return (
-                <li key={request.id}>
-                  <Link href={`/pro/demandes/${request.id}`}>
-                    <div className="provider-request-title">
-                      <span>{service?.label}</span>
-                      <time dateTime={request.publishedAt}>
-                        {formatDate(request.publishedAt)}
-                      </time>
-                    </div>
-                    <h2>
-                      {request.vehicle.make} {request.vehicle.model}
-                    </h2>
-                    <p>{request.description}</p>
-                    <div className="provider-request-meta">
-                      <span>
-                        <MapPin aria-hidden="true" /> {request.city}
-                      </span>
-                      <span>
-                        <Clock3 aria-hidden="true" />
-                        {request.urgency === "now"
-                          ? "Maintenant"
-                          : "Aujourd'hui"}
-                      </span>
-                      <span>
-                        <Camera aria-hidden="true" /> {request.photoCount}{" "}
-                        photo(s)
-                      </span>
-                    </div>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+          <EligibleRequestBrowser requests={requests} />
         ) : (
           <div className="requests-empty">
             <Clock3 aria-hidden="true" />
