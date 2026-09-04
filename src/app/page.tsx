@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
+  ArrowRight,
   BadgeCheck,
   MapPinned,
+  PackageSearch,
   ReceiptText,
   ShieldCheck,
   UserRound,
@@ -30,6 +32,7 @@ export default function Home() {
             Demander
           </Link>
           <Link href="/demandes">Interventions</Link>
+          <Link href="/boutique">Pieces auto</Link>
         </nav>
 
         <Link
@@ -83,6 +86,24 @@ export default function Home() {
               </span>
             </div>
           </div>
+        </section>
+
+        <section className="commerce-band" aria-labelledby="commerce-title">
+          <div className="commerce-visual" aria-hidden="true">
+            <PackageSearch />
+            <span>Pieces compatibles</span>
+          </div>
+          <div>
+            <p className="eyebrow">La solution continue</p>
+            <h2 id="commerce-title">La bonne piece, livree ou posee.</h2>
+            <p>
+              Batteries, pneus et consommables adaptes a votre vehicule, avec la
+              possibilite de demander la pose a un partenaire DepanUp.
+            </p>
+          </div>
+          <Link href="/boutique">
+            Explorer les pieces <ArrowRight aria-hidden="true" />
+          </Link>
         </section>
 
         <section
