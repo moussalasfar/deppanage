@@ -3,6 +3,8 @@ import Link from "next/link";
 import {
   ArrowRight,
   BadgeCheck,
+  CheckCircle2,
+  Clock3,
   MapPinned,
   PackageSearch,
   ReceiptText,
@@ -64,26 +66,33 @@ export default function Home() {
             className="visual-panel"
             aria-label="Service de depannage automobile"
           >
-            <div className="road-lines" aria-hidden="true" />
             <Image
-              className="visual-mark"
-              src="/brand/logo-mark-inverse.svg"
-              alt=""
-              width={192}
-              height={192}
+              className="hero-photo"
+              src="/brand/roadside-team.jpg"
+              alt="Un professionnel aide un conducteur a verifier son vehicule"
+              fill
+              sizes="(max-width: 860px) 100vw, 48vw"
               priority
             />
-            <p>
-              Un depanneur.
-              <br />
-              Un prix. Maintenant.
-            </p>
+            <div className="hero-photo-shade" aria-hidden="true" />
+            <div className="hero-live-status">
+              <span aria-hidden="true" />
+              Assistance disponible
+            </div>
+            <div className="hero-message">
+              <p>Un professionnel fiable, quand la route s&apos;arrete.</p>
+              <span>
+                <Clock3 aria-hidden="true" /> Comparez prix et delai avant de
+                choisir
+              </span>
+            </div>
             <div className="verification-note">
               <ShieldCheck aria-hidden="true" />
               <span>
                 <strong>Professionnels verifies</strong>
                 <small>Identite, permis, vehicule et assurance controles</small>
               </span>
+              <CheckCircle2 aria-hidden="true" />
             </div>
           </div>
         </section>

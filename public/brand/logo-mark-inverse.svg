@@ -1,6 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
   <title id="title">DepanUp</title>
-  <desc id="desc">Lettre D formee par une boucle routiere et une fleche vers l'avant.</desc>
-  <defs><mask id="lane-cut" maskUnits="userSpaceOnUse" x="0" y="0" width="96" height="96"><rect width="96" height="96" fill="#fff"/><rect x="53" y="46" width="11" height="4" rx="2" fill="#000"/></mask></defs>
-  <g mask="url(#lane-cut)" fill="#fff"><path fill-rule="evenodd" d="M12 10h34c24 0 40 15.8 40 38S70 86 46 86H12V10Zm19 18v40h15c12.6 0 21-7.7 21-20s-8.4-20-21-20H31Z"/><path d="M43 41h22l11 7-11 7H43l8-7-8-7Z"/></g>
+  <desc id="desc">Embleme DepanUp clair associant une route et un mouvement vers l'avant.</desc>
+  <rect x="5" y="5" width="86" height="86" rx="25" fill="#F8FAF7"/>
+  <path d="M28 70V27h19c16 0 27 8 27 22S63 71 47 71H28Z" fill="none" stroke="#123B36" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M38 60c8-1 12-8 17-15 5-8 10-12 20-13" fill="none" stroke="#FF5A4E" stroke-width="7" stroke-linecap="round"/>
+  <path d="m67 25 11 6-9 8" fill="none" stroke="#FF5A4E" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="38" cy="60" r="5" fill="#FF5A4E" stroke="#F8FAF7" stroke-width="3"/>
 </svg>

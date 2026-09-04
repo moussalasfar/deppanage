@@ -22,8 +22,8 @@ La fleche reste dans le contour du D. Cela evite un logo trop sportif et conserv
 
 | Fichier | Usage |
 |---|---|
-| `logo-mark.svg` | Symbole rouge sur fond clair ou photographie tres claire |
-| `logo-mark-inverse.svg` | Symbole blanc sur fond carbone, rouge ou photographie sombre |
+| `logo-mark.svg` | Tuile carbone, route blanche et signal corail sur fond clair |
+| `logo-mark-inverse.svg` | Tuile claire, route carbone et signal corail sur fond sombre |
 | `logo-concepts.svg` | Planche de decision ; ne pas livrer dans l'application |
 
 Le mot-symbole est compose en Alexandria Bold dans les maquettes. Avant depot de marque et livraison finale, il devra etre converti en contours vectoriels pour ne plus dependre d'une police installee.
@@ -104,6 +104,12 @@ Eviter :
 - voitures de luxe sans rapport avec le marche ;
 - depanneuses et uniformes manifestement non marocains ;
 - filtres rouges ou degradation volontaire de la lisibilite.
+
+### Ressources actuelles
+
+| Ressource           | Source        | Licence | Usage                         |
+| ------------------- | ------------- | ------- | ----------------------------- |
+| `roadside-team.jpg` | Pexels #5835579 | Pexels  | Scene d'assistance routiere   |
 
 ## Mouvement
 
